@@ -6,6 +6,6 @@
 }
 
 .nav-menu a:hover{
-    color: orange;
+    color: rgb(254, 181, 44);
     text-decoration: underline 2px solid white;
 }
