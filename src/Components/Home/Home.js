@@ -7,7 +7,7 @@ const Home = () => {
     const {data} = topics;
     // console.log(topics.data);
     return (
-        <div className='row w-75 d-flex justify-content-center mx-auto'>
+        <div className='row w-75 d-flex justify-content-center mx-auto py-5'>
             {
                 data.map(topic=> <Topic
                 key={topic.id}

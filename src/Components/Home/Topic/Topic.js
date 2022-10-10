@@ -4,10 +4,13 @@ const Topic = ({topic}) => {
     const {name, logo, total} = topic;
     console.log(topic);
     return (
-        <div className='card col-3 m-2'>
-            <img className='w-100' src={logo} alt="" />
-            <h2>Name: {name}</h2>
+        <div className='card  col-md-4 col-lg-3 m-2 p-2'>
+            <img className='w-100 bg-dark rounded-top' src={logo} alt="" />
             <p>Total Questions: {total}</p>
+            <div className='d-flex justify-content-between align-items-center'>
+            <h5 className='text-primary fw-bold'>{name}</h5>
+            <button className='btn btn-primary fw-bold'>Explore</button>
+            </div>
         </div>
     );
 };
