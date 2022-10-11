@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './Quiz.css'
 import Opt from './Opt';
 import { EyeIcon } from '@heroicons/react/24/solid';
+import { ToastContainer } from 'react-toastify';
 
 const Quiz = ({quiz}) => {
     console.log(quiz);
@@ -14,6 +15,7 @@ const Quiz = ({quiz}) => {
     }
     return (
         <div className='w-75 mx-auto shadow my-5 rounded'>
+            <ToastContainer></ToastContainer>
             <h5 className='py-2  mt-0 bg-primary text-white rounded-top shadow'>Q: {question}</h5>
             <p className='pt-3'>
                 {
