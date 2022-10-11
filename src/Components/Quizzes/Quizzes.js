@@ -13,7 +13,7 @@ const Quizzes = () => {
         <div className='bg-light'>
             <div className='topic-banner d-flex justify-content-center align-items-center'>
             <img className='m-2 bg-light' src={logo} alt="" />
-            <h1>{name}</h1>
+            <h1 className='text-warning'>{name}</h1>
             </div>
             <p>Total Questions: {total}</p>
             <div className='card'>
