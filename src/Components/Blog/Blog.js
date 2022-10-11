@@ -3,6 +3,7 @@ import React from 'react';
 const Blog = () => {
     return (
         <div className='bg-light py-5'>
+            <h1 className='fw-bold'>My <span className='text-warning'>Blog</span></h1>
             <div className="w-75 mx-auto row">
                 <div className="q-1 bg-light col-md-6 col-lg-4 my-4">
                 <div className='h-100 card rounded shadow mx-2'>

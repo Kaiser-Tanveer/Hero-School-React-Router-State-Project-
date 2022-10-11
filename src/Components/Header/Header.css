@@ -5,6 +5,14 @@
     font-size: 18px;
 }
 
+.isActive{
+    padding: 20px;
+    background: blue;
+    border-bottom: 2px solid white;
+    border-radius: 10px 10px 0 0;
+    box-shadow: 2px 3px 12px gray;
+}
+
 .nav-menu a:hover{
     color: rgb(254, 181, 44);
     text-decoration: underline 2px solid white;
