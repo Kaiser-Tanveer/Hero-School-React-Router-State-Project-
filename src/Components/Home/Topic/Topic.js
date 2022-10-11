@@ -1,4 +1,6 @@
 import React from 'react';
+import './Topic.css'
+import { ArrowSmallRightIcon } from '@heroicons/react/24/solid';
 
 const Topic = ({topic}) => {
     const {name, logo, total} = topic;
@@ -9,7 +11,9 @@ const Topic = ({topic}) => {
             <p>Total Questions: {total}</p>
             <div className='d-flex justify-content-between align-items-center'>
             <h5 className='text-primary fw-bold'>{name}</h5>
-            <button className='btn btn-primary fw-bold'>Explore</button>
+            <button className='btn btn-primary fw-bold'>Explore <ArrowSmallRightIcon className='btn-icon'></ArrowSmallRightIcon></button>
+            
+
             </div>
         </div>
     );
