@@ -4,9 +4,9 @@ import Opt from './Opt';
 import { EyeIcon } from '@heroicons/react/24/solid';
 import { ToastContainer } from 'react-toastify';
 
-const Quiz = ({quiz}) => {
+const Quiz = ({ quiz }) => {
     console.log(quiz);
-    const {options, question, correctAnswer} = quiz;
+    const { options, question, correctAnswer } = quiz;
     // console.log(options);
     const [ans, setAns] = useState();
     const andHandler = (correctAnswer) => {
@@ -20,17 +20,17 @@ const Quiz = ({quiz}) => {
             <p className='pt-3'>
                 {
                     options.map((option, idx) => <Opt
-                    key={idx}
-                    option={option}
-                    ans={ans}
-                    correctAnswer={correctAnswer}
+                        key={idx}
+                        option={option}
+                        ans={ans}
+                        correctAnswer={correctAnswer}
                     >
                     </Opt>)
                 }
             </p>
             <div className='d-flex flex-column-reverse flex-md-row justify-content-between p-2 border border-primary bg-light rounded-bottom shadow'>
                 <h5 className='p-4'>Ans: {ans}</h5>
-                <button onClick={()=>andHandler(correctAnswer)} className='border-0 bg-light'> Check Correct Answer <EyeIcon className='eye-icon'></EyeIcon></button>
+                <button onClick={() => andHandler(correctAnswer)} className='border-0 bg-light'> Check Correct Answer <EyeIcon className='eye-icon'></EyeIcon></button>
             </div>
         </div>
     );
