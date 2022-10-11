@@ -6,7 +6,7 @@ import './Home.css'
 const Home = () => {
     const topics = useLoaderData([]);
     const {data} = topics;
-    // console.log(topics.data);
+    console.log(topics.data);
     return (
         <div className='row w-75 d-flex justify-content-center mx-auto py-5'>
             <div className='mt-5 d-flex mx-auto justify-content-center'>

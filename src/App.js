@@ -21,8 +21,8 @@ function App() {
           element: <Home></Home>
         },
         {
-          path: '/quiz',
-          loader: async()=> fetch('https://openapi.programming-hero.com/api/quiz/1'),
+          path: 'topic/:topicId',
+          loader: async({params})=> fetch(`https://openapi.programming-hero.com/api/quiz/${params.topicId}`),
           element: <Quizzes></Quizzes>
         }
       ]
