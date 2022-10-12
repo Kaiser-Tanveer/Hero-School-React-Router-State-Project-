@@ -7,10 +7,10 @@ const Statistic = () => {
     console.log(reChart);
     return (
         <div className='bg-light pb-5'>
-                <h2 className='text-center py-4'>Chart on the Topical Quest</h2>
+                <h2 className='text-center text-md-start ms-md-4 py-4'>Chart on the Topical Quest</h2>
             <div className='mx-auto pb-5'>
                 <div className='mx-auto pb-5'>
-                        <LineChart className='w-100'
+                        <LineChart
                         width={300}
                         height={200}
                         data={reChart}
