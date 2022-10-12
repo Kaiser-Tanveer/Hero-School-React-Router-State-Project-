@@ -1,23 +1,31 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
-import Chart from './Chart';
+import { CartesianGrid, Legend, Line, LineChart, Tooltip, XAxis, YAxis, } from 'recharts';
 
 const Statistic = () => {
-    const topics = useLoaderData([]);
-    // console.log(topics);
-    const {data} = topics;
+    const reChart = useLoaderData().data;
+    console.log(reChart);
     return (
-        <div className='bg-light'>
-            <div className='w-50 me-auto mx-md-auto'>
-                <h2 className='text-center'>Chart on the Topical Quest</h2>
-                <div className='ms-lg-5'>
-                {
-                    data.map(topic => <Chart
-                    key={topic.id}
-                    topic={topic}
-
-                    ></Chart>)
-                }
+        <div className='bg-light pb-5'>
+                <h2 className='text-center py-4'>Chart on the Topical Quest</h2>
+            <div className='mx-auto pb-5'>
+                <div className='mx-auto pb-5'>
+                        <LineChart className='w-100'
+                        width={300}
+                        height={200}
+                        data={reChart}
+                        >
+                        <CartesianGrid strokeDasharray="3 3"></CartesianGrid>
+                        <XAxis dataKey="name"></XAxis>
+                        <YAxis></YAxis>
+                        <Tooltip></Tooltip>
+                        <Legend></Legend>
+                        <Line
+                        type="monotone" dataKey="total"
+                        stroke='orange'
+                        strokeWidth={2}
+                        ></Line>
+                    </LineChart>
                 </div>
             </div>
         </div>
